@@ -6,7 +6,7 @@ if status is-interactive
 	alias lla "ll -a"
     end	
 
-    fish_config theme choose "Rose Pine theme" 
+    fish_config theme choose "TokyoNight Storm" 
 
     pyenv init - | source
 end
