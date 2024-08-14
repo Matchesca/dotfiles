@@ -43,7 +43,7 @@ dashboard.section.buttons.val = {
 -- Set footer
 dashboard.section.footer.val = {
   "                       ",
-  "I Dont want to be Horny",
+  "      The Soy boy      ",
   " I Just wanna be happy ",
   "          🚀           ",
   "                       ",
