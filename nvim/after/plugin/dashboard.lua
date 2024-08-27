@@ -36,6 +36,7 @@ dashboard.section.buttons.val = {
     dashboard.button( "e", "  > New file" , ":ene <BAR> startinsert <CR>"),
     dashboard.button( "f", "  > Find file", ":cd $HOME/Desktop/Projects | Telescope find_files<CR>"),
     dashboard.button( "r", "  > Recent"   , ": Telescope oldfiles<CR>"),
+    dashboard.button( "l", "󰯆  > LeetCode", ":Leet<CR>"),
     dashboard.button( "s", "  > Settings" , ":cd ~/.config/nvim/ | :e .<CR>"),
     dashboard.button( "q", "  > Quit NVIM", ":qa<CR>"),
 }

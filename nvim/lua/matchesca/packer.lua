@@ -60,4 +60,26 @@ return require('packer').startup(function(use)
    use {
     'goolord/alpha-nvim',
     }
+
+    -- Leetcode
+    use{
+        "kawre/leetcode.nvim",
+        build = ":TSUpdate html",
+        requires = {
+            "nvim-telescope/telescope.nvim",
+            "nvim-lua/plenary.nvim", -- required by telescope
+            "MunifTanjim/nui.nvim",
+            "nvim-tree/nvim-web-devicons",
+            "rcarriga/nvim-notify",
+},
+        config = function ()
+            require('leetcode').setup()
+        end
+}
+
+    -- Latex stuff
+    use({'lervag/vimtex',
+        config = function ()
+            vim.g.vimtex_view_method = "zathura"
+        end})
 end)
