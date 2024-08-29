@@ -1,4 +1,4 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
@@ -80,6 +80,9 @@ return require('packer').startup(function(use)
     -- Latex stuff
     use({'lervag/vimtex',
         config = function ()
-            vim.g.vimtex_view_method = "zathura"
-        end})
+            vim.g.vimtex_view_method = "skim"
+            vim.g.maplocalleader = "\\"
+            vim.g.vimtex_view_skim_sync = 1
+            vim.g.vimtex_view_skim_activate = 1
+    end})
 end)
