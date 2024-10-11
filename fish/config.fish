@@ -21,3 +21,4 @@ end
 
 # Created by `pipx` on 2024-07-08 09:00:27
 set PATH $PATH /Users/rohan/.local/bin
+zoxide init fish | source
