@@ -19,6 +19,11 @@ end
 # <<< conda initialize <<<
 
 
+
 # Created by `pipx` on 2024-07-08 09:00:27
 set PATH $PATH /Users/rohan/.local/bin
+
+# tmux-sessionizer binding ctrl-f
+bind \cf "/Users/rohan/.config/bin/tmux-sessionizer"
+
 zoxide init fish | source
