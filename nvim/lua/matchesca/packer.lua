@@ -30,10 +30,10 @@ return require('packer').startup(function(use)
 --  }
 
   use('mbbill/undotree')
-  use {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-	}
+
+-- Status line
+  use('vim-airline/vim-airline')
+
   use('tpope/vim-fugitive')
   use {
   'VonHeikemen/lsp-zero.nvim',
@@ -85,4 +85,7 @@ return require('packer').startup(function(use)
             vim.g.vimtex_view_skim_sync = 1
             vim.g.vimtex_view_skim_activate = 1
     end})
+
+    -- Github copilot stuff
+    use('github/copilot.vim')
 end)
