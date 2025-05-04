@@ -16,4 +16,17 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
 
   },
+
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      -- Start selection with 'v' key (same as regular visual mode)
+      init_selection = "<CR>",  -- Starts selection from the cursor
+
+      -- Move to the next level of selection
+      node_incremental = "<Tab>",  -- Select next text object (word, line, function, etc.)
+      node_decremental = "<S-Tab>", -- Select previous text object
+
+    },
+  },
 }
