@@ -79,8 +79,25 @@ return {
                     vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
                     vim.keymap.set({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
                     vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+
                 end,
+
             })
+            -- *** Configure Diagnostic Display ***
+            vim.diagnostic.config({
+                virtual_text = true, -- Show diagnostics inline
+                signs = true,        -- Show icons in the sign column
+                underline = true,    -- Underline the problematic code
+                update_in_insert = false, -- Improve performance
+                severity_sort = true,
+            })
+
+            -- Optional: Customize diagnostic signs (ensure your font supports these icons)
+            local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+            for type, icon in pairs(signs) do
+                local hl = "DiagnosticSign" .. type
+                vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+            end
 
             require('mason-lspconfig').setup({
                 ensure_installed = {},
